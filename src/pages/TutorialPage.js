@@ -4,6 +4,8 @@ import step1 from "../images/dekstopTutorial/step_1.jpg";
 import step2 from "../images/dekstopTutorial/step_2.jpg";
 import step3 from "../images/dekstopTutorial/step_3.jpg";
 import step4 from "../images/dekstopTutorial/step_4.jpg";
+import and_step1 from "../images/androidTutorial/and_step1.jpg";
+import and_step2 from "../images/androidTutorial/and_step2.jpg";
 
 export default function TutorialPage() {
   const [tutorial, setTutorial] = useState("");
@@ -12,7 +14,7 @@ export default function TutorialPage() {
     <div className="text-white">
       <Navbar />
 
-      <div className="flex justify-center gap-20 my-10 text-2xl">
+      <div className="flex justify-center gap-20 my-10 text-2xl mx-8">
         <button
           className="bg-sky-700 p-4 rounded-md"
           onClick={() => {
@@ -79,7 +81,33 @@ export default function TutorialPage() {
         </div>
       )}
 
-      {tutorial === "android" && <div>android</div>}
+      {tutorial === "android" && (
+        <div className="mx-8 text-white">
+          <div className="my-8">
+            <h1 className="text-2xl font-bold text-[#3d99ea]">Step 1</h1>
+            <p className="my-2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam,
+              illum. Unde dignissimos pariatur, suscipit dolore assumenda
+              ratione! Aspernatur, amet eos.
+            </p>
+            <div className="flex items-center justify-center">
+              <img className="w-[300px]" src={and_step1} alt="" />
+            </div>
+          </div>
+
+          <div className="my-8">
+            <h1 className="text-2xl font-bold text-[#3d99ea]">Step 2</h1>
+            <p className="my-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              dolorum velit quaerat molestiae perspiciatis? Temporibus minus
+              dolor expedita molestias sapiente.
+            </p>
+            <div className="flex items-center justify-center">
+              <img className="w-[300px]" src={and_step2} alt="" />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* <div className="grid lg:grid-cols-2 grid-cols-1 text-white my-10">
         <div className="mx-8">
